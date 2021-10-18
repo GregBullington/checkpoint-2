@@ -1,0 +1,57 @@
+body{
+  background-image: url(https://gifdownload.net/wp-content/uploads/2020/03/pixel-stars-gif-.gif);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  user-select: none;
+}
+
+.site-font {
+  font-family: 'Press Start 2P', cursive;
+  color: aqua;
+}
+.font-size {
+  font-size: 10px;
+}
+.font-size-two {
+  font-size: 13px;
+}
+.icon-flip {
+  -o-transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.card.game-card {
+  min-width: 10rem;
+  min-height: 10rem;
+  background: rgba(0, 255, 42, .15);
+  border-left: 10px solid grey;
+  text-shadow: 1px 1px 2px limegreen;
+  margin-bottom: 1em;
+}
+
+.cursor-pointer{ 
+  cursor:pointer;
+}
+
+.button-bg{
+  background: rgb(0, 223, 252);
+  box-shadow: 1px 1px 5px black; 
+}
+
+.btn {
+  min-width: 75px;
+}
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+  }
+  
+.disabled {
+  background-color: rgb(255, 0, 0);
+}
