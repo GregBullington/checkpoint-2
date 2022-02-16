@@ -1,4 +1,4 @@
-let diamonds = 0
+let diamonds = 90
 let totalMultiplyer = 1
 let autoMultiplyer = 0
 
