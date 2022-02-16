@@ -1,18 +1,18 @@
 let diamonds = 90
-let totalMultiplyer = 1
-let autoMultiplyer = 0
+let totalMultiplier = 1
+let autoMultiplier = 0
 
 
 let clickUpgrades = {
   pickaxe: {
     price: 100,
     quantity: 0,
-    multiplyer: 2
+    Multiplier: 2
   },
   drill: {
     price: 250,
     quantity: 0,
-    multiplyer: 3
+    Multiplier: 3
   }
 }
 
@@ -20,12 +20,12 @@ let automaticUpgrades = {
   rover: {
     price: 600,
     quantity: 0,
-    automaticMultiplyer: 20
+    automaticMultiplier: 20
   },
   miner: {
     price: 350,
     quantity: 0,
-    automaticMultiplyer: 5
+    automaticMultiplier: 5
   }
 }
 
@@ -67,20 +67,20 @@ function drawTotals() {
   document.getElementById('price-drill').innerText = ` ${clickUpgrades.drill.price}`
   document.getElementById('price-miner').innerText = ` ${automaticUpgrades.miner.price}`
   document.getElementById('price-rover',).innerText = ` ${automaticUpgrades.rover.price}`
-  document.getElementById('TCM').innerText = ` ${totalMultiplyer}`
-  document.getElementById('TAM').innerText = ` ${autoMultiplyer}`
+  document.getElementById('TCM').innerText = ` ${totalMultiplier}`
+  document.getElementById('TAM').innerText = ` ${autoMultiplier}`
 
 }
 drawTotals()
 
 
 function mine() {
-  diamonds += totalMultiplyer
+  diamonds += totalMultiplier
   drawTotals()
   checkFunds()
 }
 function autoMine() {
-  diamonds += autoMultiplyer
+  diamonds += autoMultiplier
   drawTotals()
   checkFunds()
 }
@@ -89,7 +89,7 @@ function buyPickaxe() {
   if (diamonds >= clickUpgrades.pickaxe.price) {
     diamonds -= clickUpgrades.pickaxe.price
     clickUpgrades.pickaxe.quantity++
-    totalMultiplyer += clickUpgrades.pickaxe.multiplyer
+    totalMultiplier += clickUpgrades.pickaxe.Multiplier
     clickUpgrades.pickaxe.price *= 2
     checkFunds()
   }
@@ -100,7 +100,7 @@ function buyDrill() {
   if (diamonds >= clickUpgrades.drill.price) {
     diamonds -= clickUpgrades.drill.price
     clickUpgrades.drill.quantity++
-    totalMultiplyer += clickUpgrades.drill.multiplyer
+    totalMultiplier += clickUpgrades.drill.Multiplier
     clickUpgrades.drill.price *= 2
     checkFunds()
   }
@@ -111,7 +111,7 @@ function buyMiner() {
   if (diamonds >= automaticUpgrades.miner.price) {
     diamonds -= automaticUpgrades.miner.price
     automaticUpgrades.miner.quantity++
-    autoMultiplyer += automaticUpgrades.miner.automaticMultiplyer
+    autoMultiplier += automaticUpgrades.miner.automaticMultiplier
     automaticUpgrades.miner.price *= 2
     checkFunds()
   }
@@ -123,7 +123,7 @@ function buyRover() {
   if (diamonds >= automaticUpgrades.rover.price) {
     diamonds -= automaticUpgrades.rover.price
     automaticUpgrades.rover.quantity++
-    autoMultiplyer += automaticUpgrades.rover.automaticMultiplyer
+    autoMultiplier += automaticUpgrades.rover.automaticMultiplier
     automaticUpgrades.rover.price *= 2
     checkFunds()
   }
